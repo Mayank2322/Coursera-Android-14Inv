@@ -1,0 +1,6 @@
+
+e.g. (Week 2 - SimpleCalcTest )
+Android Studio Terminal:
+> gradlew.bat connectedsimpleCalc
+Output file:
+D:\Projects\Coursera\Android-MyRep-14Inv\Week2-TheActivityClass\WorkSpace\SimpleCalcTest\simpleCalc\build\outputs\reports\androidTests\connected\index.html

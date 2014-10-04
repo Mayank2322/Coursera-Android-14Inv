@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="2" >
+
+    <dataSet config="main" >
+        <source path="D:\Projects\Coursera\Android-MyRep-14Inv\Week2-TheActivityClass\WorkSpace\SimpleCalcTest\simpleCalc\src\androidTest\res" >
+            <file
+                name="icon"
+                path="D:\Projects\Coursera\Android-MyRep-14Inv\Week2-TheActivityClass\WorkSpace\SimpleCalcTest\simpleCalc\src\androidTest\res\drawable-hdpi\icon.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="icon"
+                path="D:\Projects\Coursera\Android-MyRep-14Inv\Week2-TheActivityClass\WorkSpace\SimpleCalcTest\simpleCalc\src\androidTest\res\drawable-ldpi\icon.png"
+                qualifiers="ldpi-v4"
+                type="drawable" />
+            <file
+                name="icon"
+                path="D:\Projects\Coursera\Android-MyRep-14Inv\Week2-TheActivityClass\WorkSpace\SimpleCalcTest\simpleCalc\src\androidTest\res\drawable-mdpi\icon.png"
+                qualifiers="mdpi-v4"
+                type="drawable" />
+            <file
+                name="main"
+                path="D:\Projects\Coursera\Android-MyRep-14Inv\Week2-TheActivityClass\WorkSpace\SimpleCalcTest\simpleCalc\src\androidTest\res\layout\main.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                path="D:\Projects\Coursera\Android-MyRep-14Inv\Week2-TheActivityClass\WorkSpace\SimpleCalcTest\simpleCalc\src\androidTest\res\values\strings.xml"
+                qualifiers="" >
+                <string name="hello" >Hello World!
+                </string>
+                <string name="app_name" >SimpleCalcTest
+                </string>
+            </file>
+        </source>
+        <source path="D:\Projects\Coursera\Android-MyRep-14Inv\Week2-TheActivityClass\WorkSpace\SimpleCalcTest\simpleCalc\build\generated\res\rs\test\debug" />
+        <source path="D:\Projects\Coursera\Android-MyRep-14Inv\Week2-TheActivityClass\WorkSpace\SimpleCalcTest\simpleCalc\build\generated\res\generated\test\debug" />
+    </dataSet>
+
+</merger>

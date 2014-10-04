@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="2" >
+
+    <dataSet config="main" >
+        <source path="D:\Projects\Coursera\Android-MyRep-14Inv\Week2-TheActivityClass\WorkSpace\SimpleCalc\app\src\main\res" >
+            <file
+                name="icon"
+                path="D:\Projects\Coursera\Android-MyRep-14Inv\Week2-TheActivityClass\WorkSpace\SimpleCalc\app\src\main\res\drawable-hdpi\icon.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="icon"
+                path="D:\Projects\Coursera\Android-MyRep-14Inv\Week2-TheActivityClass\WorkSpace\SimpleCalc\app\src\main\res\drawable-ldpi\icon.png"
+                qualifiers="ldpi-v4"
+                type="drawable" />
+            <file
+                name="icon"
+                path="D:\Projects\Coursera\Android-MyRep-14Inv\Week2-TheActivityClass\WorkSpace\SimpleCalc\app\src\main\res\drawable-mdpi\icon.png"
+                qualifiers="mdpi-v4"
+                type="drawable" />
+            <file
+                name="main"
+                path="D:\Projects\Coursera\Android-MyRep-14Inv\Week2-TheActivityClass\WorkSpace\SimpleCalc\app\src\main\res\layout\main.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                path="D:\Projects\Coursera\Android-MyRep-14Inv\Week2-TheActivityClass\WorkSpace\SimpleCalc\app\src\main\res\values\strings.xml"
+                qualifiers="" >
+                <string name="hello" >Unit Testing Sample
+                </string>
+                <string name="multiply" >Multiply Values
+                </string>
+                <string name="app_name" >Simple Calc
+                </string>
+                <string name="resultLabel" >Result: 
+                </string>
+                <string name="add" >Add Values
+                </string>
+                <string name="hint1" >Enter value...
+                </string>
+                <string name="hint2" >Enter value two...
+                </string>
+            </file>
+        </source>
+        <source path="D:\Projects\Coursera\Android-MyRep-14Inv\Week2-TheActivityClass\WorkSpace\SimpleCalc\app\build\generated\res\rs\debug" />
+        <source path="D:\Projects\Coursera\Android-MyRep-14Inv\Week2-TheActivityClass\WorkSpace\SimpleCalc\app\build\generated\res\generated\debug" />
+    </dataSet>
+    <dataSet config="debug" >
+        <source path="D:\Projects\Coursera\Android-MyRep-14Inv\Week2-TheActivityClass\WorkSpace\SimpleCalc\app\src\debug\res" />
+    </dataSet>
+
+</merger>
