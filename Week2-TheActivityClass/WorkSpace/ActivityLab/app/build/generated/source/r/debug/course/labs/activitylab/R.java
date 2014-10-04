@@ -14,12 +14,13 @@ public final class R {
         public static final int ic_launcher=0x7f020000;
     }
     public static final class id {
-        public static final int bClose=0x7f060005;
-        public static final int bLaunchActivityTwo=0x7f060004;
-        public static final int create=0x7f060000;
-        public static final int restart=0x7f060003;
-        public static final int resume=0x7f060002;
-        public static final int start=0x7f060001;
+        public static final int bClose=0x7f060006;
+        public static final int bLaunchActivityTwo=0x7f060005;
+        public static final int button=0x7f060000;
+        public static final int create=0x7f060001;
+        public static final int restart=0x7f060004;
+        public static final int resume=0x7f060003;
+        public static final int start=0x7f060002;
     }
     public static final class layout {
         public static final int activity_one=0x7f030000;

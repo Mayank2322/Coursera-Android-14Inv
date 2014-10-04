@@ -27,13 +27,16 @@ public class ActivityOne extends Activity {
 	// mCreate, mRestart, mStart and mResume
 	// to count calls to onCreate(), onRestart(), onStart() and
 	// onResume(). These variables should not be defined as static.
-
 	// You will need to increment these variables' values when their
 	// corresponding lifecycle methods get called.
+
+    int mCreate, mRestart, mStart, mResume;
 
 	// TODO: Create variables for each of the TextViews
 	// named mTvCreate, mTvRestart, mTvStart, mTvResume.
 	// for displaying the current count of each counter variable
+
+    static TextView mTvCreate, mTvRestart, mTvStart, mTvResume;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -44,6 +47,12 @@ public class ActivityOne extends Activity {
 		// Hint: Access the TextView by calling Activity's findViewById()
 		// textView1 = (TextView) findViewById(R.id.textView1);
 
+        mTvCreate = (TextView) findViewById(R.id.create);
+        mTvRestart = (TextView) findViewById(R.id.restart);
+        mTvStart = (TextView) findViewById(R.id.start);
+        mTvResume = (TextView) findViewById(R.id.resume);
+
+
 		Button launchActivityTwoButton = (Button) findViewById(R.id.bLaunchActivityTwo);
 		launchActivityTwoButton.setOnClickListener(new OnClickListener() {
 
@@ -52,10 +61,10 @@ public class ActivityOne extends Activity {
 				// TODO:
 				// Launch Activity Two
 				// Hint: use Context's startActivity() method
+				// Create an intent stating which Activity you would like to start
 
-				// Create an intent stating which Activity you would like to
-				// start
-				Intent intent = null;
+				Intent intent = new Intent(ActivityOne.this, ActivityTwo.class);
+                startActivity(intent);
 
 				// Launch the Activity using the intent
 
@@ -68,6 +77,10 @@ public class ActivityOne extends Activity {
 			// TODO:
 			// Restore value of counters from saved state
 			// Only need 4 lines of code, one for every count variable
+            mCreate = savedInstanceState.getInt(CREATE_KEY, mCreate);
+            mRestart = savedInstanceState.getInt(RESTART_KEY, mRestart);
+            mStart = savedInstanceState.getInt(START_KEY, mStart);
+            mResume = savedInstanceState.getInt(RESUME_KEY, mResume);
 
 		}
 
@@ -77,7 +90,8 @@ public class ActivityOne extends Activity {
 		// TODO:
 		// Update the appropriate count variable
 		// Update the user interface via the displayCounts() method
-
+        mCreate++;
+        displayCounts();
 	}
 
 	// Lifecycle callback overrides
@@ -92,7 +106,8 @@ public class ActivityOne extends Activity {
 		// TODO:
 		// Update the appropriate count variable
 		// Update the user interface
-
+        mStart++;
+        displayCounts();
 	}
 
 	@Override
@@ -105,7 +120,8 @@ public class ActivityOne extends Activity {
 		// TODO:
 		// Update the appropriate count variable
 		// Update the user interface
-
+        mResume++;
+        displayCounts();
 	}
 
 	@Override
@@ -134,6 +150,8 @@ public class ActivityOne extends Activity {
 		// TODO:
 		// Update the appropriate count variable
 		// Update the user interface
+        mRestart++;
+        displayCounts();
 
 	}
 
@@ -151,7 +169,12 @@ public class ActivityOne extends Activity {
 		// Save state information with a collection of key-value pairs
 		// 4 lines of code, one for every count variable
 
+        savedInstanceState.putInt(CREATE_KEY, mCreate);
+        savedInstanceState.putInt(RESTART_KEY, mRestart);
+        savedInstanceState.putInt(START_KEY, mStart);
+        savedInstanceState.putInt(RESUME_KEY, mResume);
 	}
+
 
 	// Updates the displayed counters
 	// This method expects that the counters and TextView variables use the

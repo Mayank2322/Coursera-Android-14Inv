@@ -1,0 +1,46 @@
+1. Warmup Exercise:
+
+a) Open the ActivityLifecycleWalkthrough.pdf chart in the Misc directory. This chart depicts two state machines, representing the lifecycles of ActivityOne and ActivityTwo. If you want you can cut out the little circles and use them as markers as you work through this exercise.
+
+b) Suppose the user starts the application, which brings up ActivityOne. Next, suppose the user presses the Button to start ActivityTwo, and that ActivityTwo then appears on the screen.
+
+> Open Application
+ActivityOne? Entered the onCreate() method
+ActivityOne? Entered the onStart() method
+ActivityOne? Entered the onResume() method
+> Clicked "Start Activity Two" button
+ActivityOne? Entered the onPause() method
+ActivityTwo? Entered the onCreate() method
+ActivityTwo? Entered the onStart() method
+ActivityTwo? Entered the onResume() method
+ActivityOne? Entered the onStop() method
+
+c) Next, suppose the user navigates back to ActivityOne by pressing the “Close Activity” Button of ActivityTwo. ActivityTwo closes and then ActivityOne reappears. Starting where you left off after the previous step:
+
+
+> Clicked "Close Activity" button
+ActivityTwo? Entered the onPause() method
+ActivityOne? Entered the onRestart() method
+ActivityOne? Entered the onStart() method
+ActivityOne? Entered the onResume() method
+ActivityTwo? Entered the onStop() method
+ActivityTwo? Entered the onDestroy() method
+
+d) Next, the user presses the Button to start ActivityTwo again. Once ActivityTwo appears, the user presses the Home Key on the device. Starting where you left off after the previous step:
+
+> Clicked "Start Activity Two" button
+ActivityOne? Entered the onPause() method
+ActivityTwo? Entered the onCreate() method
+ActivityTwo? Entered the onStart() method
+ActivityTwo? Entered the onResume() method
+ActivityOne? Entered the onStop() method
+> Clicked HOME button
+ActivityTwo? Entered the onPause() method
+ActivityTwo? Entered the onStop() method
+
+e) Next, the user starts the application again, by clicking on its icon in the Launcher. Once the application has restarted, and starting where you left off after the previous step:
+
+> Restart Application
+ActivityTwo? Entered the onRestart() method
+ActivityTwo? Entered the onStart() method
+ActivityTwo? Entered the onResume() method

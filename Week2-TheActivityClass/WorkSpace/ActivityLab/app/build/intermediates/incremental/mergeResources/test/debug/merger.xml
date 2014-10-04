@@ -2,9 +2,9 @@
 <merger version="2" >
 
     <dataSet config="main" >
-        <source path="D:\Projects\Coursera\Android-MyRep-14Inv\Week2-TheActivityClass\WorkSpace\app\src\androidTest\res" />
-        <source path="D:\Projects\Coursera\Android-MyRep-14Inv\Week2-TheActivityClass\WorkSpace\app\build\generated\res\rs\test\debug" />
-        <source path="D:\Projects\Coursera\Android-MyRep-14Inv\Week2-TheActivityClass\WorkSpace\app\build\generated\res\generated\test\debug" />
+        <source path="D:\Projects\Coursera\Android-MyRep-14Inv\Week2-TheActivityClass\WorkSpace\ActivityLab\app\src\androidTest\res" />
+        <source path="D:\Projects\Coursera\Android-MyRep-14Inv\Week2-TheActivityClass\WorkSpace\ActivityLab\app\build\generated\res\rs\test\debug" />
+        <source path="D:\Projects\Coursera\Android-MyRep-14Inv\Week2-TheActivityClass\WorkSpace\ActivityLab\app\build\generated\res\generated\test\debug" />
     </dataSet>
 
 </merger>

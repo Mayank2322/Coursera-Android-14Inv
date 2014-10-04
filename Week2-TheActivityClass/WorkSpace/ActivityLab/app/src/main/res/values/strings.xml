@@ -7,8 +7,8 @@
     <string name="onStart">onStart() calls: 0</string>
     <string name="onResume">onResume() calls: 0</string>
     <string name="onRestart">onRestart() calls: 0</string>
-    <string name="button">Start Activity Two</string>
     <string name="title_activity_activity_two">Activity Two</string>
     <string name="close">Close Activity</string>
-	
+    <string name="button">Start Activity Two</string>
+
 </resources>
