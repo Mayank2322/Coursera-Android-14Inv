@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/SourceFiles/Skeletons/FragmentsLab/FragmentsLab.iml" filepath="$PROJECT_DIR$/SourceFiles/Skeletons/FragmentsLab/FragmentsLab.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SourceFiles/TestCases/FragmentsLabTestPhone/FragmentsLabTestPhone.iml" filepath="$PROJECT_DIR$/SourceFiles/TestCases/FragmentsLabTestPhone/FragmentsLabTestPhone.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SourceFiles/TestCases/FragmentsLabTestTablet/FragmentsLabTestTablet.iml" filepath="$PROJECT_DIR$/SourceFiles/TestCases/FragmentsLabTestTablet/FragmentsLabTestTablet.iml" />
+    </modules>
+  </component>
+</project>
+
