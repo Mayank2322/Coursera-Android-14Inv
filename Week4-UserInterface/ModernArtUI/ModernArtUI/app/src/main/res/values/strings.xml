@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">ModernArtUI</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">More information</string>
+    <string name="color2">imgViewColor2</string>
+    <string name="imgViewColor1">color1</string>
+
+    <string name="welcome">This is a DialogFragment.</string>
+    <string name="dialogfragment">Open DialogFragment</string>
+    <string name="alertdialogfragment">Open Alert DialogFragment</string>
+
+</resources>
