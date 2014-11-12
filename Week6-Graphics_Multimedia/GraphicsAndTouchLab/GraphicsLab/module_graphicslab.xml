@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="module_graphicslab" default="compile.module.graphicslab">
+  <dirname property="module.graphicslab.basedir" file="${ant.file.module_graphicslab}"/>
+  
+  <property name="module.jdk.home.graphicslab" value="${project.jdk.home}"/>
+  <property name="module.jdk.bin.graphicslab" value="${project.jdk.bin}"/>
+  <property name="module.jdk.classpath.graphicslab" value="${project.jdk.classpath}"/>
+  
+  <property name="compiler.args.graphicslab" value="-encoding UTF-8 -source 1.6 ${compiler.args}"/>
+  
+  <property name="graphicslab.output.dir" value="${module.graphicslab.basedir}/../out/production/GraphicsLab"/>
+  <property name="graphicslab.testoutput.dir" value="${module.graphicslab.basedir}/../out/test/GraphicsLab"/>
+  
+  <path id="graphicslab.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="graphicslab.module.production.classpath">
+    <path refid="${module.jdk.classpath.graphicslab}"/>
+  </path>
+  
+  <path id="graphicslab.runtime.production.module.classpath">
+    <pathelement location="${graphicslab.output.dir}"/>
+  </path>
+  
+  <path id="graphicslab.module.classpath">
+    <path refid="${module.jdk.classpath.graphicslab}"/>
+    <pathelement location="${graphicslab.output.dir}"/>
+  </path>
+  
+  <path id="graphicslab.runtime.module.classpath">
+    <pathelement location="${graphicslab.testoutput.dir}"/>
+    <pathelement location="${graphicslab.output.dir}"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.graphicslab">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.graphicslab">
+    <patternset refid="excluded.from.module.graphicslab"/>
+  </patternset>
+  
+  <path id="graphicslab.module.sourcepath">
+    <dirset dir="${module.graphicslab.basedir}">
+      <include name="src"/>
+      <include name="gen"/>
+    </dirset>
+  </path>
+  
+  
+  <target name="compile.module.graphicslab" depends="compile.module.graphicslab.production,compile.module.graphicslab.tests" description="Compile module GraphicsLab"/>
+  
+  <target name="compile.module.graphicslab.production" depends="register.custom.compilers" description="Compile module GraphicsLab; production classes">
+    <mkdir dir="${graphicslab.output.dir}"/>
+    <javac2 destdir="${graphicslab.output.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.graphicslab}/javac">
+      <compilerarg line="${compiler.args.graphicslab}"/>
+      <bootclasspath refid="graphicslab.module.bootclasspath"/>
+      <classpath refid="graphicslab.module.production.classpath"/>
+      <src refid="graphicslab.module.sourcepath"/>
+      <patternset refid="excluded.from.compilation.graphicslab"/>
+    </javac2>
+    
+    <copy todir="${graphicslab.output.dir}">
+      <fileset dir="${module.graphicslab.basedir}/src">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+      <fileset dir="${module.graphicslab.basedir}/gen">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="compile.module.graphicslab.tests" depends="register.custom.compilers,compile.module.graphicslab.production" description="compile module GraphicsLab; test classes" unless="skip.tests"/>
+  
+  <target name="clean.module.graphicslab" description="cleanup module">
+    <delete dir="${graphicslab.output.dir}"/>
+    <delete dir="${graphicslab.testoutput.dir}"/>
+  </target>
+</project>
